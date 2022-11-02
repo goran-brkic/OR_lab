@@ -1,5 +1,10 @@
 # OR - 1. Laboratorijska vježba
 
+## Licence
+MIT licenca omogućuje dopušta korištenje koda/sadržaja u bilo koju svrhu ponekad čak i ako će se koristiti za stvaranje programske podrške.
+Korisnici mogu mijenjati kod/sadržaj kako god žele dok god uključe originalnu MIT licencu u svojoj distribuciji.
+
+
 
 ## Description
 Hotels in Croatia containing 5 stars in CSV and JSON formats
