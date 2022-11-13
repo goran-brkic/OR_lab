@@ -1,4 +1,4 @@
-# OR - 1. Laboratorijska vježba
+# OR - Laboratorijska vježbe
 
 ## Licence
 MIT licenca omogućuje dopušta korištenje koda/sadržaja u bilo koju svrhu ponekad čak i ako će se koristiti za stvaranje programske podrške.
