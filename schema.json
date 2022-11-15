@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://localhost:3000/hoteli_schema.json",
+  "title": "Hoteli",
+  "description": "A 5 star hotel in Croatia",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "naziv": {
+		  "description": "Naziv hotela",
+          "type": "string"
+        },
+        "grad": {
+		  "description": "Grad u kojem je hotel",
+          "type": "string"
+        },
+        "zemlja": {
+		  "description": "Zemlja hotela",
+          "type": "string"
+        },
+        "adresa": {
+		  "description": "Adresa hotela",
+          "type": "string"
+        },
+        "godina_osnutka": {
+		  "description": "Godina osnutka hotela",
+          "type": "integer"
+        },
+        "tel": {
+		  "description": "Telefonski broj hotela",
+          "type": "string"
+        },
+        "email": {
+		  "description": "Kontakt email hotela",
+          "type": "string"
+        },
+        "url": {
+		  "description": "URL stranice hotela",
+          "type": "string"
+        },
+        "br_soba": {
+		  "description": "Broj soba hotela",
+          "type": "integer"
+        },
+        "br_zvjezdica": {
+		  "description": "Broj zvjezdica hotela",
+          "type": "integer"
+        },
+        "pogodnosti": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "besplatan_wifi": {
+				  "description": "Postoji li besplatan wifi u hotelu",
+                  "type": "string"
+                },
+                "unutarnji bazen": {
+				  "description": "Postoji li unutarnji bazen u hotelu",
+                  "type": "string"
+                },
+                "pet-friendly": {
+				  "description": "Je li hotel pet-friendly",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "besplatan_wifi",
+                "unutarnji bazen",
+                "pet-friendly"
+              ]
+            }
+          ]
+        },
+        "lokacija": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "sirina": {
+				  "description": "Geografska sirina hotela",
+                  "type": "number"
+                },
+                "duzina": {
+				  "description": "Geografska duzina hotela",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "sirina",
+                "duzina"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "naziv",
+        "grad",
+        "zemlja",
+        "adresa",
+        "godina_osnutka",
+        "tel",
+        "email",
+        "url",
+        "br_soba",
+        "br_zvjezdica",
+        "pogodnosti",
+        "lokacija"
+      ]
+    }
+  ]
+}
