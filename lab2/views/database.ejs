@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Database</title>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div>
+      <form action="/database">
+      <div class="form-group">
+        <label for="search_value">Polje za pretragu</label>
+        <input type="text" class="form-control" id="search_value" name="search_value" aria-describedby="emailHelp" value="" placeholder="Unesite vrijednost">
+        <small id="emailHelp" class="form-text text-muted">Po ovoj vrijednosti će se pretraživati podaci.</small>
+      </div>
+      <div>
+      <select class="form-select" style="margin-bottom: 15px;" name="polje" aria-label="Default select example">
+        Odaberite polje za pretragu
+        <option value="wildcard" selected>Sva polja (wildcard)</option>
+        <option value="naziv">Naziv</option>
+        <option value="grad">Grad</option>
+        <option value="zemlja">Zemlja</option>
+        <option value="adresa">Adresa</option>
+        <option value="godina_osnutka">Godina osnutka</option>
+        <option value="tel">Tel</option>
+        <option value="email">Email</option>
+        <option value="url">Url</option>
+        <option value="br_soba">Broj Soba</option>
+        <option value="br_zvjezdica">Broj zvjezdica</option>
+        <option value="besplatan_wifi">Besplatan wifi</option>
+        <option value="bazen">Bazen</option>
+        <option value="pet_friendly">Pet-friendly</option>
+        <option value="sirina">Širina</option>
+        <option value="duzina">Dužina</option>
+      </select>
+      <br>
+      <button type="submit" class="btn btn-primary">Pretraži</button>
+    </form>
+    
+    <br>
+    <% if(csv && json) { %>
+      <a href="/files/query.csv" download>
+        Preuzmi query.csv
+      </a>
+      <br>
+      <a href="/files/query.json" download>
+        Preuzmi query.json
+      </a>
+    <% } %>
+    </div>
+      
+
+    </div>
+    <div class="form-group pull-right">
+      <input type="text" id="myInput" onkeyup="myFunction()" class="search form-control" placeholder="Što tražite?">
+  </div>
+  <span class="counter pull-right"></span>
+  <table id="myTable" class="table table-hover table-bordered results">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th class="col-md-5 col-xs-5">Naziv</th>
+        <th class="col-md-4 col-xs-4">Grad</th>
+        <th class="col-md-3 col-xs-3">Zemlja</th>
+        <th class="col-md-3 col-xs-3">Adresa</th>
+        <th class="col-md-3 col-xs-3">Godina osnutka</th>
+        <th class="col-md-3 col-xs-3">Tel</th>
+        <th class="col-md-3 col-xs-3">E-mail</th>
+        <th class="col-md-3 col-xs-3">Url</th>
+        <th class="col-md-3 col-xs-3">Broj soba</th>
+        <th class="col-md-3 col-xs-3">Broj zvjezdica</th>
+        <th class="col-md-3 col-xs-3">Besplatan wifi</th>
+        <th class="col-md-3 col-xs-3">Bazen</th>
+        <th class="col-md-3 col-xs-3">Pet friendly</th>
+        <th class="col-md-3 col-xs-3">Sirina</th>
+        <th class="col-md-3 col-xs-3">Duzina</th>
+      </tr>
+      <tr class="warning no-result">
+        <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let i=0; i<podaci.length; i++) { %>
+        <tr>
+          <th scope="row"><%= i+1 %></th>
+          <td><%= podaci[i].naziv %></td>
+          <td><%= podaci[i].grad %></td>
+          <td><%= podaci[i].zemlja %></td>
+          <td><%= podaci[i].adresa %></td>
+          <td><%= podaci[i].godina_osnutka %></td>
+          <td><%= podaci[i].tel %></td>
+          <td><%= podaci[i].email %></td>
+          <td><%= podaci[i].url %></td>
+          <td><%= podaci[i].br_soba %></td>
+          <td><%= podaci[i].br_zvjezdica %></td>
+          <td><%= podaci[i].besplatan_wifi %></td>
+          <td><%= podaci[i].bazen %></td>
+          <td><%= podaci[i].pet_friendly %></td>
+          <td><%= podaci[i].sirina %></td>
+          <td><%= podaci[i].duzina %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+    <script>
+      function myFunction () {
+    var searchTerm = $(".search").val();
+    var listItem = $(".results tbody").children("tr");
+    var searchSplit = searchTerm.replace(/ /g, "'):containsi('");
+
+    $.extend($.expr[":"], {
+      containsi: function (elem, i, match, array) {
+        return (
+          (elem.textContent || elem.innerText || "")
+            .toLowerCase()
+            .indexOf((match[3] || "").toLowerCase()) >= 0
+        );
+      }
+    });
+
+    $(".results tbody tr")
+      .not(":containsi('" + searchSplit + "')")
+      .each(function (e) {
+        $(this).attr("visible", "false");
+      });
+
+    $(".results tbody tr:containsi('" + searchSplit + "')").each(function (e) {
+      $(this).attr("visible", "true");
+    });
+
+    var jobCount = $('.results tbody tr[visible="true"]').length;
+    $(".counter").text(jobCount + " item");
+
+    if (jobCount == "0") {
+      $(".no-result").show();
+    } else {
+      $(".no-result").hide();
+    }
+  }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+[
+   {
+      "naziv":"Amadaria Park",
+      "br_zvjezdica":5,
+      "adresa":"Maršala Tita 109",
+      "godina_osnutka":1967,
+      "tel":"+385 51 278 007",
+      "email":"info@amadriapark.com",
+      "url":"https://www.amadriapark.com/hr/hotel/amadria-park-hotel-milenij-opatija-business-leisure-hotel",
+      "br_soba":100,
+      "pogodnosti":[
+         {
+            "besplatan_wifi":"ne",
+            "unutarnji bazen":"da",
+            "pet-friendly":"da"
+         }
+      ],
+      "lokacija":[
+         {
+            "sirina":45.33400567934142,
+            "duzina":14.305636473694104
+         }
+      ]
+   },
+   {
+      "naziv":"DoubleTree by Hilton Zagreb",
+      "br_zvjezdica":5,
+      "adresa":"Ulica grada vukovara 269A",
+      "godina_osnutka":2012,
+      "tel":"+385 1 60 01 900",
+      "email":"zagreb.reservations@hilton.com",
+      "url":"http://www.zagreb.doubletree.com/",
+      "br_soba":152,
+      "pogodnosti":[
+         {
+            "besplatan_wifi":"da",
+            "unutarnji bazen":"da",
+            "pet-friendly":"da"
+         }
+      ],
+      "lokacija":[
+         {
+            "sirina":45.801786288698416,
+            "duzina":16.001706763380476
+         }
+      ]
+   },
+   {
+      "naziv":"Esplanade Zagreb",
+      "br_zvjezdica":5,
+      "adresa":"Mihanovićeva 1",
+      "godina_osnutka":1925,
+      "tel":"+385 1 45 66 666",
+      "email":"info@esplanade.hr",
+      "url":"http://www.esplanade.hr/",
+      "br_soba":208,
+      "pogodnosti":[
+         {
+            "besplatan_wifi":"da",
+            "unutarnji bazen":"ne",
+            "pet-friendly":"da"
+         }
+      ],
+      "lokacija":[
+         {
+            "sirina":45.805505147803274,
+            "duzina":15.97599100971124
+         }
+      ]
+   },
+   {
+      "naziv":"Hotel Dubrovnik Palace",
+      "br_zvjezdica":5,
+      "adresa":"Masarykov Put 20",
+      "godina_osnutka":2003,
+      "tel":"+385 20 430 000",
+      "email":"reservations@alh.hr",
+      "url":"https://www.adriaticluxuryhotels.com/hr/hotel-dubrovnik-palace/",
+      "br_soba":320,
+      "pogodnosti":[
+         {
+            "besplatan_wifi":"da",
+            "unutarnji bazen":"ne",
+            "pet-friendly":"da"
+         }
+      ],
+      "lokacija":[
+         {
+            "sirina":42.65141687853165,
+            "duzina":18.060979989677627
+         }
+      ]
+   },
+   {
+      "naziv":"Hotel Monte Mulini",
+      "br_zvjezdica":5,
+      "adresa":"A. Smareglia 3",
+      "godina_osnutka":2009,
+      "tel":"+385 52 800 250",
+      "email":"hello@maistra.hr",
+      "url":"https://www.maistra.com/hr/smjestaj/hotel-monte-mulini/#/",
+      "br_soba":400,
+      "pogodnosti":[
+         {
+            "besplatan_wifi":"ne",
+            "unutarnji bazen":"ne",
+            "pet-friendly":"da"
+         }
+      ],
+      "lokacija":[
+         {
+            "sirina":45.072954962995546,
+            "duzina":13.636956391238071
+         }
+      ]
+   },
+   {
+      "naziv":"La Premier Hotel",
+      "br_zvjezdica":5,
+      "adresa":" Ulica kralja Držislava 5",
+      "godina_osnutka":2016,
+      "tel":"+385 1 60 01 900",
+      "email":"zagreb.reservations@hilton.com",
+      "url":"http://www.lepremier.hr/",
+      "br_soba":62,
+      "pogodnosti":[
+         {
+            "besplatan_wifi":"da",
+            "unutarnji bazen":"ne",
+            "pet-friendly":"ne"
+         }
+      ],
+      "lokacija":[
+         {
+            "sirina":45.810320895990884,
+            "duzina":15.985996551779204
+         }
+      ]
+   },
+   {
+      "naziv":"Meridien Lav",
+      "br_zvjezdica":5,
+      "adresa":"Grljevacka 2a",
+      "godina_osnutka":1971,
+      "tel":"+38521500500",
+      "email":"info@lemeridiensplit.com",
+      "url":"https://www.lemeridiensplit.com/",
+      "br_soba":378,
+      "pogodnosti":[
+         {
+            "besplatan_wifi":"ne",
+            "unutarnji bazen":"ne",
+            "pet-friendly":"ne"
+         }
+      ],
+      "lokacija":[
+         {
+            "sirina":43.492809008732216,
+            "duzina":16.53832906336709
+         }
+      ]
+   },
+   {
+      "naziv":"Royal Ariston Hotel",
+      "br_zvjezdica":5,
+      "adresa":"Kardinala Stepinca 31",
+      "godina_osnutka":2017,
+      "tel":"+385 20 440 100",
+      "email":"reservations@royaldubrovnik.com",
+      "url":"https://www.hotelaristondubrovnik.com/",
+      "br_soba":115,
+      "pogodnosti":[
+         {
+            "besplatan_wifi":"ne",
+            "unutarnji bazen":"da",
+            "pet-friendly":"da"
+         }
+      ],
+      "lokacija":[
+         {
+            "sirina":42.659635881753964,
+            "duzina":18.05887435737669
+         }
+      ]
+   },
+   {
+      "naziv":"Sheraton Zagreb",
+      "br_zvjezdica":5,
+      "adresa":"Kneza Borne 2",
+      "godina_osnutka":1995,
+      "tel":"+385 1 45 53 535",
+      "email":"sales@hup-zagreb.hr",
+      "url":"http://www.marriott.com/ZAGSI",
+      "br_soba":306,
+      "pogodnosti":[
+         {
+            "besplatan_wifi":"da",
+            "unutarnji bazen":"da",
+            "pet-friendly":"da"
+         }
+      ],
+      "lokacija":[
+         {
+            "sirina":45.801786288698416,
+            "duzina":16.001706763380476
+         }
+      ]
+   },
+   {
+      "naziv":"The Westin Zagreb",
+      "br_zvjezdica":5,
+      "adresa":"Kršnjavoga 1",
+      "godina_osnutka":1975,
+      "tel":"+385 1 48 92 000",
+      "email":"sales@hup-zagreb.hr",
+      "url":"http://www.marriott.com/ZAGWI",
+      "br_soba":349,
+      "pogodnosti":[
+         {
+            "besplatan_wifi":"da",
+            "unutarnji bazen":"ne",
+            "pet-friendly":"da"
+         }
+      ],
+      "lokacija":[
+         {
+            "sirina":45.80711150136659,
+            "duzina":15.966327582203974
+         }
+      ]
+   }
+]
